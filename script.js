@@ -7,24 +7,32 @@ function saludoGenerico() {
 
 saludoGenerico();
 
-localStorage.setItem("bienvenid@ a ZasArte", `${nombreUsuario}`);
+function itemCuadro() {
 
-alert("Complete la información del cuadro que desea llevar:");
+    localStorage.setItem("bienvenid@ a ZasArte", `${nombreUsuario}`);
 
-let nombreArtista = prompt("Escriba el nombre del artista");
-localStorage.setItem("Autor", `${nombreArtista}`);
+    alert("Complete la información del cuadro que desea llevar:");
 
-let nombreObra = prompt("Escriba el nombre de la obra");
-localStorage.setItem("Obra", `${nombreObra}`);
+    let nombreArtista = prompt("Escriba el nombre del artista");
+    localStorage.setItem("Autor", `${nombreArtista}`);
 
-let nombreTecnica = prompt("Escriba el nombre de la técnica");
-localStorage.setItem("Técnica", `${nombreTecnica}`);
+    let nombreObra = prompt("Escriba el nombre de la obra");
+    localStorage.setItem("Obra", `${nombreObra}`);
 
-let dimensionCuadro = prompt("Escriba la dimensión del cuadro, ejemplo: 100 x 50 cm");
-localStorage.setItem("Dimensión", `${dimensionCuadro}`);
+    let nombreTecnica = prompt("Escriba el nombre de la técnica");
+    localStorage.setItem("Técnica", `${nombreTecnica}`);
 
-let cuadroCantidades = prompt("Escriba la cantidad a llevar");
-localStorage.setItem("Cantidad", `${cuadroCantidades}`);
+    let dimensionCuadro = prompt("Escriba la dimensión del cuadro, ejemplo: 100 x 50 cm");
+    localStorage.setItem("Dimensión", `${dimensionCuadro}`);
+
+    let cuadroCantidades = prompt("Escriba la cantidad a llevar");
+    localStorage.setItem("Cantidad", `${cuadroCantidades}`);
+}
+
+itemCuadro();
+
+let idCuadro = localStorage.getItem("ItemCuadro");
+console.log(idCuadro);
 
 
 const cuadro = {
@@ -45,7 +53,7 @@ while (isNaN(numerocelular)) {
     numerocelular = parseInt(prompt("Escribe tu numero de celula"))
 }
 
-alert("Su pedido quedo registrado, nos comunicaremos con usted") 
+alert("Su pedido quedo registrado, nos comunicaremos con usted!") 
 
 
 //Is Not a Number -- Devuelve true cuando el valor analizado sea NaN
