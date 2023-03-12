@@ -31,9 +31,11 @@ function itemCuadro() {
 
 itemCuadro();
 
-let idCuadro = localStorage.getItem("ItemCuadro");
-console.log(idCuadro);
-
+for (let i = 0; i < localStorage.length; i++){
+    let clave = localStorage.key(i);
+    let valor = localStorage.getItem(clave);
+    console.log(clave, valor);
+}
 
 const cuadro = {
     nombre: "",
